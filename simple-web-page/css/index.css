@@ -11,7 +11,8 @@ body {
 }
 
 .contenedor {
-    width: 1000px;
+    max-width: 1000px;
+    width: 90%;
     margin: 20px auto;
     overflow: hidden;
 }
@@ -47,7 +48,7 @@ header nav ul li a:hover {
 }
 
 .main {
-    width: 700px;
+    width: 70%;
     background: #ffffff;
     float: left;
 }
@@ -76,7 +77,7 @@ header nav ul li a:hover {
 }
 
 aside {
-    width: 300px;
+    width: 30%;
     background: #161f26;
     color: #ffffff;
     padding: 20px;
@@ -116,11 +117,23 @@ aside .widget p {
 }
 
 footer {
-    width: 700px;
+    width: 70%;
     background: #000000;
     color: #ffffff;
     padding: 15px 0;
     text-align: center;
     /* overflow: hidden; */
     clear: both;
+}
+
+@media screen and (max-width:800px) {
+    .main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+    }
 }
