@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open sans';
+    background: #000000 url("../img/fondo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+}
+
+header {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    background: #fff;
+    padding: 20px;
+    width: 70%;
+}
+
+.main article .thumb {
+    margin-bottom: 20px;
+}
+
+.main article .thumb img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.main article h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.main article p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+aside {
+    width: 30%;
+    background: #537dca;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside .ad {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+    background: #4264a2;
+    /* margin-bottom: 20px 0; */
+}
+
+footer {
+    margin: 20px 0;
+    background: rgba(255, 255, 255, .2);
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+footer .social-media a:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width:800px) {
+    .main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        flex-direction: row;
+    }
+    aside .ad {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    header .menu {
+        width: 100%;
+        background: rgba(255, 255, 255, .2);
+        text-align: center;
+        padding: 20px;
+    }
+    header .menu a {
+        margin: 0 20px;
+    }
+    header .logo {
+        margin-bottom: 20px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .author {
+        order: 2;
+    }
+    footer .social-media {
+        order: 1;
+    }
+    @media screen and (max-width:400px) {
+        aside {
+            display: none;
+        }
+    }
+}
